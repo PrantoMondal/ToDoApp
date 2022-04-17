@@ -10,11 +10,14 @@ import android.widget.RadioButton
 import com.studioartagonist.todoapppranto.Customdialogs.DatePickerFragment
 import com.studioartagonist.todoapppranto.Customdialogs.TimePickerFragment
 import com.studioartagonist.todoapppranto.databinding.FragmentNewToDoBinding
+import priority_normal
 
 
 class NewToDoFragment : Fragment() {
     private lateinit var binding: FragmentNewToDoBinding
-    private var priorityType = ""
+    var priority = priority_normal
+    var dateInMillis = System.currentTimeMillis()
+    var timeInMillis = System.currentTimeMillis()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -22,17 +25,20 @@ class NewToDoFragment : Fragment() {
     ): View? {
         binding = FragmentNewToDoBinding.inflate(inflater, container, false)
 
-        initPriorityTypeRadioGroup()
+        binding.priorityRG.setOnCheckedChangeListener { group, checkedId ->
+            val rb: RadioButton = group.findViewById(checkedId)
+            priority = rb.text.toString()
+        }
 
         binding.dateBtn.setOnClickListener {
             DatePickerFragment {
-                binding.showDateTV.text = it
+                binding.dateTV.text = it
             }.show(childFragmentManager, null)
 
         }
         binding.timeBtn.setOnClickListener {
             TimePickerFragment {
-                binding.showTimeTV.text = it
+                binding.timeTV.text = it
             }.show(childFragmentManager, null)
 
         }
@@ -40,15 +46,4 @@ class NewToDoFragment : Fragment() {
 
         return binding.root
     }
-
-
-    private fun initPriorityTypeRadioGroup() {
-
-
-        binding.priorityTypeRG.setOnCheckedChangeListener { radioGroup, i ->
-            var rb: RadioButton = radioGroup.findViewById(i)
-            priorityType = rb.text.toString()
-        }
-    }
-
 }

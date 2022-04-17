@@ -1,10 +1,7 @@
 package com.studioartagonist.todoapppranto.db
 
 import android.content.Context
-import androidx.room.ColumnInfo
-import androidx.room.Database
-import androidx.room.Entity
-import androidx.room.PrimaryKey
+import androidx.room.*
 import com.studioartagonist.todoapppranto.entities.TodoModel
 import com.studioartagonist.todoapppranto.entities.UserModel
 import com.tanvir.training.todoappbatch04.daos.TodoDao
