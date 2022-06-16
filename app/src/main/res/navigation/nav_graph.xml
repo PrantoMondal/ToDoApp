@@ -18,5 +18,13 @@
         <action
             android:id="@+id/action_toDoListFragment_to_newToDoFragment2"
             app:destination="@id/newToDoFragment" />
+        <action
+            android:id="@+id/action_toDoListFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.studioartagonist.todoapppranto.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
 </navigation>
