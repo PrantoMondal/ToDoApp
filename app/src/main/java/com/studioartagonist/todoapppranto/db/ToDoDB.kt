@@ -4,7 +4,7 @@ import android.content.Context
 import androidx.room.*
 import com.studioartagonist.todoapppranto.entities.TodoModel
 import com.studioartagonist.todoapppranto.entities.UserModel
-import com.tanvir.training.todoappbatch04.daos.TodoDao
+import com.studioartagonist.todoapppranto.daos.TodoDao
 import com.tanvir.training.todoappbatch04.daos.UserDao
 
 

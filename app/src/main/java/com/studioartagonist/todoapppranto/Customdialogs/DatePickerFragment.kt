@@ -10,7 +10,6 @@ import android.widget.DatePicker
 import android.widget.TimePicker
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.DialogFragment
-import com.example.actioninputes.getFormattedDateTime
 
 
 class DatePickerFragment(val callback: (String) -> Unit)  : DialogFragment(),DatePickerDialog.OnDateSetListener{

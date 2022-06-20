@@ -1,4 +1,4 @@
-package com.tanvir.training.todoappbatch04.daos
+package com.studioartagonist.todoapppranto.daos
 
 import androidx.lifecycle.LiveData
 import androidx.room.*
