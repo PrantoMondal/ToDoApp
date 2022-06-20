@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/fragment_new_to_do.xml" value="0.19166666666666668" />
+        <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/todo_row.xml" value="0.19166666666666668" />
       </map>
     </option>
   </component>

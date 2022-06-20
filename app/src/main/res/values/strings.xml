@@ -3,8 +3,8 @@
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="register">register</string>
-    <string name="new_user">new_user</string>
     <string name="password">password</string>
     <string name="email_address">email_address</string>
+    <string name="new_user">new user?</string>
 
 </resources>

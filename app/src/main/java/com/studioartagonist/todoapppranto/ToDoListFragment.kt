@@ -18,9 +18,7 @@ class ToDoListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         binding = FragmentToDoListBinding.inflate(inflater,container,false)
-
         binding.floatingActionButton.setOnClickListener{
-
             findNavController().navigate(R.id.action_toDoListFragment_to_newToDoFragment2)
         }
 
