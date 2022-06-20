@@ -20,16 +20,13 @@ class LoginFragment : Fragment() {
     private lateinit var binding: FragmentLoginBinding
     private lateinit var preference: LoginPreference
     private val loginViewModel: LoginViewModel by activityViewModels()
-
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         preference = LoginPreference(requireContext())
-        binding = FragmentLoginBinding.inflate(inflater,container,false)
-
-        loginViewModel.errMsgLD.observe(viewLifecycleOwner){
+        binding = FragmentLoginBinding.inflate(inflater, container, false)
+        loginViewModel.errMsgLD.observe(viewLifecycleOwner) {
             Toast.makeText(requireActivity(), it, Toast.LENGTH_SHORT).show()
         }
         binding.loginBtn.setOnClickListener {
@@ -37,7 +34,7 @@ class LoginFragment : Fragment() {
             val password = binding.passwordInputET.text.toString()
             loginViewModel.login(email, password) {
                 lifecycle.coroutineScope.launch {
-                    preference.setLoginStatus(true,it,requireContext())
+                    preference.setLoginStatus(true, it, requireContext())
                     findNavController().popBackStack()
                 }
             }
@@ -45,18 +42,16 @@ class LoginFragment : Fragment() {
         binding.regBtn.setOnClickListener {
             val email = binding.emailInputET.text.toString()
             val password = binding.passwordInputET.text.toString()
-
             val user = UserModel(
                 email = email, password = password
             )
             loginViewModel.register(user){
                 lifecycle.coroutineScope.launch {
-                    preference.setLoginStatus(true,it,requireContext())
+                    preference.setLoginStatus(true, it, requireContext())
                     findNavController().popBackStack()
                 }
             }
         }
-
         return binding.root
     }
 }

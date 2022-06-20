@@ -5,7 +5,7 @@ import androidx.room.*
 import com.studioartagonist.todoapppranto.entities.TodoModel
 import com.studioartagonist.todoapppranto.entities.UserModel
 import com.studioartagonist.todoapppranto.daos.TodoDao
-import com.tanvir.training.todoappbatch04.daos.UserDao
+import com.studioartagonist.todoapppranto.daos.UserDao
 
 
 @Database(entities = [TodoModel::class, UserModel::class], version = 1)
@@ -28,5 +28,3 @@ abstract class TodoDatabase : RoomDatabase() {
         }
     }
 }
-
-

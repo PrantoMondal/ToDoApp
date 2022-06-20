@@ -6,38 +6,36 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.viewModelScope
 import com.studioartagonist.todoapppranto.db.TodoDatabase
 import com.studioartagonist.todoapppranto.entities.UserModel
-import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 class LoginViewModel(application: Application)
     : AndroidViewModel(application) {
-        private val userDao = TodoDatabase.getDB(application).userDao()
+    private val userDao = TodoDatabase.getDB(application).userDao()
     val errMsgLD: MutableLiveData<String> = MutableLiveData()
     var userModel: UserModel? = null
 
-    fun login(email: String, password:String,callback:(Long) -> Unit){
+
+    fun login(email: String, passwowrd: String, callback:(Long) -> Unit) {
         viewModelScope.launch {
             userModel = userDao.getUserByEmail(email)
-            if(userModel!=null){
-                if (userModel!!.password == password){
+            if (userModel != null) {
+                if (userModel!!.password == passwowrd) {
                     callback(userModel!!.userId)
+                } else {
+                    errMsgLD.value = "Incorrect password"
                 }
-                else{
-                    errMsgLD.value = "Incorrect Password"
-                }
-            }
-            else{
+            } else {
                 errMsgLD.value = "Email does not exist"
             }
         }
     }
-    fun register(user: UserModel,callback:(Long) -> Unit){
+
+    fun register(user: UserModel, callback:(Long) -> Unit) {
         viewModelScope.launch {
             userModel = userDao.getUserByEmail(user.email)
-            if (userModel!=null){
-                errMsgLD.value = "Email Already Exist"
-            }
-            else{
+            if (userModel != null) {
+                errMsgLD.value = "Email already exists"
+            }else {
                 val rowid = userDao.insertUser(user)
                 userModel = user.apply {
                     userId = rowid
