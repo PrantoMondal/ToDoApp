@@ -7,12 +7,12 @@
 
     <fragment
         android:id="@+id/newToDoFragment"
-        android:name="com.studioartagonist.todoapppranto.NewToDoFragment"
+        android:name="com.studioartagonist.todoapppranto.NewTodoFragment"
         android:label="New ToDo"
         tools:layout="@layout/fragment_new_to_do" />
     <fragment
         android:id="@+id/toDoListFragment"
-        android:name="com.studioartagonist.todoapppranto.ToDoListFragment"
+        android:name="com.studioartagonist.todoapppranto.TodoListFragment"
         android:label="ToDo List"
         tools:layout="@layout/fragment_to_do_list" >
         <action

@@ -1,20 +1,15 @@
 package com.studioartagonist.todoapppranto.repos
 
 
-//import androidx.lifecycle.LiveData
-//import com.studioartagonist.todoapppranto.daos.TodoDao
-//import com.studioartagonist.todoapppranto.db.ToDoDB
-//
-//class ToDoRepository(val toDoDao: toDoDao) {
-//
-//    suspend fun addToDo(toDoDB: ToDoDB){
-//        toDoDao.addToDo(toDoDB)
-//    }
-//
-//    suspend fun deleteToDo(toDoDB: ToDoDB){
-//        toDoDao.deleteToDo(toDoDB)
-//    }
-//
-//    fun getAllToDo() : LiveData<List<ToDoDB>> = toDoDao.getAllToDo()
-    
-//}
+import com.studioartagonist.todoapppranto.daos.TodoDao
+
+import com.studioartagonist.todoapppranto.entities.TodoModel
+
+class TodoRepository(val todoDao: TodoDao) {
+
+    suspend fun insertTodo(todoModel: TodoModel) {
+        todoDao.insertTodo(todoModel)
+    }
+
+    fun getTodoByUserId(userId: Long) = todoDao.getTodosByUserId(userId)
+}

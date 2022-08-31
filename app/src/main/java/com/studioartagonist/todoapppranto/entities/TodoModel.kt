@@ -16,5 +16,11 @@ data class TodoModel(
     val priority: String,
     var date: Long = System.currentTimeMillis(),
     var time: Long,
+    var day: Int,
+    var month: Int,
+    var year: Int,
+    var hour: Int,
+    var minute: Int,
+
     var completed: Boolean = false
 )

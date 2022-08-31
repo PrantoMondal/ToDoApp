@@ -4,7 +4,7 @@ import android.content.DialogInterface
 import android.os.Bundle
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.DialogFragment
-import com.studioartagonist.todoapppranto.R
+//import com.tanvir.training.todoappbatch04.R
 
 class CustomAlertDialog(val callback: () -> Unit) : DialogFragment() {
     override fun onCreateDialog(savedInstanceState: Bundle?): Dialog {
