@@ -6,8 +6,7 @@
     <data>
         <variable
             name="todo"
-            type="com.studioartagonist.todoapppranto.entities.TodoModel"
-             />
+            type="com.tanvir.training.todoappbatch04.entities.TodoModel" />
     </data>
 
     <androidx.cardview.widget.CardView

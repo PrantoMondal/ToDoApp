@@ -3,11 +3,14 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.173" />
+        <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/drawable/ic_launcher_background.xml" value="0.173" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/fragment_login.xml" value="0.33" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/fragment_new_to_do.xml" value="0.19166666666666668" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/fragment_to_do_list.xml" value="0.19166666666666668" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/layout/todo_row.xml" value="0.19166666666666668" />
+        <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/menu/row_item_menu.xml" value="0.19166666666666668" />
         <entry key="..\:/Files/SEIP Android Course/ToDoAppPranto/ToDoAppPranto/app/src/main/res/menu/todo_list_menu.xml" value="0.25" />
       </map>
     </option>
