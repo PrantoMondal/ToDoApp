@@ -3,7 +3,8 @@ package com.tanvir.training.todoappbatch04.adapters
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.databinding.BindingAdapter
-import com.tanvir.training.todoappbatch04.R
+import com.studioartagonist.todoapppranto.R
+
 import getFormattedDateTime
 import priority_high
 import priority_normal
